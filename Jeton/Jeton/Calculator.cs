@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading;
 
@@ -13,16 +11,11 @@ namespace Jeton
         private Thread thread;
         public Jeton jeton;
         private string buffer;
-        public Calculator urmator
-        {
-            get;
-            set;
-        }
 
-        public Calculator()
+        public Calculator(Jeton jeton)
         {
             generateIPAdress();
-            
+            this.jeton = jeton;
         }
 
         public string Buffer
@@ -62,9 +55,6 @@ namespace Jeton
             ip = i1.ToString() + '.' + i2 + '.' + i3 + '.' + i4;
         }
 
-
-
-
         public void threading()
         {
             thread = new Thread(new ThreadStart(run));
@@ -73,29 +63,22 @@ namespace Jeton
 
         public void Stop()
         {
-            
-            
             thread.Join();
-        }
-
-        public bool checkAlive()
-        {
-            return thread.IsAlive;
         }
 
         private void run()
         {
             lock (jeton)
             {
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 20; i++)
                 {
                     Monitor.Pulse(jeton);
-                    //jeton.afisare(this);
+                    jeton.afisare(this);
                     jeton.verificaFinishJeton(this);
                     jeton.verificaLiberJeton(this);
-                    
-                    jeton.calcCurent = this.urmator;
-                    Thread.Sleep(50);
+                    jeton.verificaCreareMesaj(this);
+
+                    Thread.Sleep(100);
                     try
                     {
                         Monitor.Wait(jeton);

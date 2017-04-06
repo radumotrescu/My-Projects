@@ -11,7 +11,6 @@ namespace Jeton
 
 
         private string mesaj;
-        private bool visitedDestination = false;
         private static Random rand = new Random(DateTime.Now.Millisecond);
         private List<Calculator> retea;
         private static Random random = new Random(DateTime.Now.Millisecond);
@@ -46,13 +45,6 @@ namespace Jeton
             set;
         }
 
-        public Calculator calcCurent
-        {
-            get;
-            set;
-        }
-
-
         private Jeton()
         {
         }
@@ -67,14 +59,8 @@ namespace Jeton
             }
         }
 
-        public void FirstStart()
+        public void GeneratePath()
         {
-            
-        }
-
-        public void Start()
-        {
-            var newText = RandomName(15);
             int finish = retea.Count;
             int intSursaIP = rand.Next(0, finish);
             SursaIP = retea[intSursaIP].IP;
@@ -87,8 +73,8 @@ namespace Jeton
             }
 
             DestinatieIP = retea[intDestinatieIP].IP;
-            mesaj=newText;
-            Liber = false;
+            Finish = false;
+            Liber = true;
 
         }
         public void afisare(Calculator calc)
@@ -98,17 +84,34 @@ namespace Jeton
 
         public void verificaFinishJeton(Calculator calculator)
         {
-            if (calculator.IP.Equals(DestinatieIP))
+            if (calculator.IP.Equals(DestinatieIP) && Liber == false)
             {
                 Finish = true;
-                Console.WriteLine("Jetonul a ajuns la destinatie {0}", calculator.IP);
                 calculator.Buffer = mesaj;
-                visitedDestination = true;
-
+                Console.WriteLine("Jetonul a ajuns la destinatie {0} Bufferul calculatorului este : {1}", calculator.IP, calculator.Buffer);
             }
-
-
         }
+
+
+        public void verificaLiberJeton(Calculator calculator)
+        {
+            if (calculator.IP.Equals(SursaIP) && Finish == true)
+            {
+                Liber = true;
+                GeneratePath();
+            }
+        }
+
+        public void verificaCreareMesaj(Calculator calculator)
+        {
+            if (calculator.IP.Equals(SursaIP) && Finish == false)
+            {
+                Liber = false;
+                var newMesaj = RandomName(10);
+                mesaj = newMesaj;
+            }
+        }
+
         public string RandomName(int num)
         {
             string possibleCharsArray = "qwertyuioasdfghjklzxcvbnm1234567890";
@@ -119,21 +122,6 @@ namespace Jeton
                 result[num] = possibleCharsArray[random.Next(stringSize)];
             }
             return new string(result);
-        }
-
-        public void verificaLiberJeton(Calculator calculator)
-        {
-            if (calculator.IP.Equals(SursaIP) && visitedDestination == true)
-            {
-                Liber = true;
-                Console.WriteLine("Jetonul a fost eliberat {0}", calculator.IP);
-                visitedDestination = false;
-
-                Console.WriteLine(mesaj);
-                Start();
-
-            }
-
         }
 
     }
