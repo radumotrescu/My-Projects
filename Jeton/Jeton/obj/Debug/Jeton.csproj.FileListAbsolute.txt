@@ -1,0 +1,9 @@
+C:\Users\student.STATIA2551\Desktop\Jeton\Jeton\bin\Debug\Jeton.exe.config
+C:\Users\student.STATIA2551\Desktop\Jeton\Jeton\bin\Debug\Jeton.exe
+C:\Users\student.STATIA2551\Desktop\Jeton\Jeton\bin\Debug\Jeton.pdb
+C:\Users\student.STATIA2551\Desktop\Jeton\Jeton\obj\Debug\Jeton.csprojResolveAssemblyReference.cache
+C:\Users\student.STATIA2551\Desktop\Jeton\Jeton\obj\Debug\Jeton.exe
+C:\Users\student.STATIA2551\Desktop\Jeton\Jeton\obj\Debug\Jeton.pdb
+C:\C++\Visual\Jeton\Jeton\bin\Debug\Jeton.exe.config
+C:\C++\Visual\Jeton\Jeton\obj\Debug\Jeton.exe
+C:\C++\Visual\Jeton\Jeton\obj\Debug\Jeton.pdb
