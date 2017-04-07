@@ -70,8 +70,8 @@ namespace Jeton
         {
             lock (jeton)
             {
-                //for (int i = 0; i < 20; i++)
-                while (true)
+                for (int i = 0; i < 5; i++)
+                //while (true)
                 {
                     Monitor.Pulse(jeton);
                     jeton.afisare(this);
