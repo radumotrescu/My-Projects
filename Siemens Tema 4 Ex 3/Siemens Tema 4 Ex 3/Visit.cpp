@@ -1,10 +1,9 @@
 #include "Visit.h"
 
-Visit::Visit(std::string name, boost::gregorian::date date)
+Visit::Visit(std::unique_ptr<Customer>customer, const boost::gregorian::date date)
 {
 	this->date = date;
-
-
+	this->customer = std::move(customer);
 }
 
 auto Visit::getName() -> std::string
@@ -17,11 +16,13 @@ auto Visit::getServiceExpense() -> double
 	return serviceExpense;
 }
 
-auto Visit::setServiceExpense(double ex) -> void
+auto Visit::setServiceExpense(const double ex) -> void
 {
-	double serviceDiscount = Discount::getServiceDiscount(customer->getMemberType());
-	ex -= ex*serviceDiscount;
-	serviceExpense = ex;
+	if (customer->isMember())
+	{
+		double serviceDiscount = Discount::getServiceDiscount(customer->getMemberType());
+		serviceExpense = ex - ex*serviceDiscount;
+	}
 }
 
 auto Visit::getProductExpense() -> double
@@ -29,12 +30,13 @@ auto Visit::getProductExpense() -> double
 	return productExpense;
 }
 
-auto Visit::setProductExpense(double ex) -> void
+auto Visit::setProductExpense(const double ex) -> void
 {
-	double productDiscount = Discount::getProductDiscount(customer->getMemberType());
-	ex -= ex*productDiscount;
-	productExpense = ex;
-	
+	if (customer->isMember())
+	{
+		double productDiscount = Discount::getProductDiscount(customer->getMemberType());
+		productExpense = ex - ex*productDiscount;
+	}
 }
 
 auto Visit::getTotalExpense() -> double
@@ -44,14 +46,12 @@ auto Visit::getTotalExpense() -> double
 
 auto Visit::toString() -> std::string
 {
-
 	std::string toReturn = "";
 	toReturn += customer->toString();
-	toReturn += " ";
 	toReturn += boost::gregorian::to_simple_string(date);
 	toReturn += " ";
-	toReturn += getTotalExpense();
-	toReturn += " ";
+	toReturn += std::to_string(getTotalExpense());
+	toReturn += "\n";
 
 	return toReturn;
 }
@@ -59,5 +59,5 @@ auto Visit::toString() -> std::string
 
 Visit::~Visit()
 {
-	delete this;
+
 }

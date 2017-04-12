@@ -1,17 +1,18 @@
 #include "Discount.h"
 
-double Discount::serviceDiscountPremium = 0.2;
-double Discount::serviceDiscountGold = 0.15;
-double Discount::serviceDiscountSilver = 0.1;
-double Discount::productDiscountPremium = 0.1;
-double Discount::productDiscountGold = 0.1;
-double Discount::productDiscountSilver = 0.1;
+double const Discount::serviceDiscountPremium = 0.2;
+double const Discount::serviceDiscountGold = 0.15;
+double const Discount::serviceDiscountSilver = 0.1;
+
+double const Discount::productDiscountPremium = 0.1;
+double const Discount::productDiscountGold = 0.1;
+double const Discount::productDiscountSilver = 0.1;
 
 Discount::Discount()
 {
 }
 
-auto Discount::getServiceDiscount(std::string type) -> double
+auto Discount::getServiceDiscount(const std::string type) -> double
 {
 	if (type == "Premium")
 	{
@@ -29,7 +30,7 @@ auto Discount::getServiceDiscount(std::string type) -> double
 		return 0.0;
 }
 
-auto Discount::getProductDiscount(std::string type) -> double
+auto Discount::getProductDiscount(const std::string type) -> double
 {
 	if (type == "Premium")
 	{
@@ -50,5 +51,5 @@ auto Discount::getProductDiscount(std::string type) -> double
 
 Discount::~Discount()
 {
-	delete this;
+
 }
