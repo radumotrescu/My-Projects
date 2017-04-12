@@ -70,14 +70,15 @@ namespace Jeton
         {
             lock (jeton)
             {
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 10; i++)
                 //while (true)
                 {
                     Monitor.Pulse(jeton);
                     jeton.afisare(this);
+                    jeton.verificaCreareMesaj(this);
                     jeton.verificaFinishJeton(this);
                     jeton.verificaLiberJeton(this);
-                    jeton.verificaCreareMesaj(this);
+                    
 
                     Thread.Sleep(100);
                     try
