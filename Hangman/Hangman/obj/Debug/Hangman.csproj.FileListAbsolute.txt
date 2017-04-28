@@ -1,0 +1,17 @@
+C:\C#\Hangman\Hangman\bin\Debug\Hangman.exe.config
+C:\C#\Hangman\Hangman\bin\Debug\Hangman.exe
+C:\C#\Hangman\Hangman\bin\Debug\Hangman.pdb
+C:\C#\Hangman\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
+C:\C#\Hangman\Hangman\obj\Debug\App.g.cs
+C:\C#\Hangman\Hangman\obj\Debug\Hangman_MarkupCompile.cache
+C:\C#\Hangman\Hangman\obj\Debug\Hangman_MarkupCompile.lref
+C:\C#\Hangman\Hangman\obj\Debug\Hangman.g.resources
+C:\C#\Hangman\Hangman\obj\Debug\Hangman.Properties.Resources.resources
+C:\C#\Hangman\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
+C:\C#\Hangman\Hangman\obj\Debug\Hangman.exe
+C:\C#\Hangman\Hangman\obj\Debug\Hangman.pdb
+C:\C#\Hangman\Hangman\obj\Debug\MainWindow.g.cs
+C:\C#\Hangman\Hangman\obj\Debug\View\UserView.g.cs
+C:\C#\Hangman\Hangman\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\C#\Hangman\Hangman\obj\Debug\MainWindow.baml
+C:\C#\Hangman\Hangman\obj\Debug\View\UserView.baml
