@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="413.393" Width="494.643">
 	<Grid>
-		<views:UserView  x:Name="UserViewControl" Loaded="UserViewControl_Loaded"/>
+		
 	</Grid>
 </Window>

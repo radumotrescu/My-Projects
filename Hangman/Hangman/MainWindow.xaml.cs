@@ -26,10 +26,7 @@ namespace Hangman
 
 		private void UserViewControl_Loaded(object sender, RoutedEventArgs e)
 		{
-			var userViewModelObject = new ViewModel.UserViewModel();
-			userViewModelObject.LoadUsers();
 
-			UserViewControl.DataContext = userViewModelObject;
 		}
 	}
 }

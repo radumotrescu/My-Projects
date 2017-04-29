@@ -23,9 +23,12 @@ public:
 	void Join(Matrice *destination, int destI, int destJ);
 	void InmultireStrassen(Matrice *firstMatrix, Matrice *secondMatrix);
 	void profileMethod(void(Matrice::*functie)(Matrice*, Matrice*), Matrice *firstMatrix, Matrice *secondMatrix);
+	void rotireMatrice();
+	void covariance();
+
 
 private:
-	short **matrice;
+	float **matrice;
 	int n;
 
 

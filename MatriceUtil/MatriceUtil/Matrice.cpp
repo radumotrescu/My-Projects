@@ -16,9 +16,9 @@ Matrice::~Matrice()
 void Matrice::citire(std::string numeFisier)
 {
 	std::ifstream fin(numeFisier);
-	matrice = new short*[n];
+	matrice = new float*[n];
 	for (int i = 0; i < n; i++)
-		matrice[i] = new short[n];
+		matrice[i] = new float[n];
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < n; j++)
 		{
@@ -28,9 +28,9 @@ void Matrice::citire(std::string numeFisier)
 
 void Matrice::matriceVida()
 {
-	matrice = new short*[n];
+	matrice = new float*[n];
 	for (int i = 0; i < n; i++)
-		matrice[i] = new short[n];
+		matrice[i] = new float[n];
 }
 
 void Matrice::afisare(std::string numeFisier)
@@ -63,7 +63,7 @@ void Matrice::InmultireNormala(Matrice *firstMatrix, Matrice *secondMatrix)
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < n; j++)
 		{
-			int sum = 0;
+			float sum = 0;
 			for (int k = 0; k < n; k++)
 				sum += firstMatrix->matrice[i][k] * secondMatrix->matrice[k][j];
 			matrice[i][j] = sum;
@@ -77,9 +77,9 @@ Matrice* Matrice::Scadere(Matrice *firstMatrix, Matrice *secondMatrix)
 
 	int n = firstMatrix->n;
 
-	result->matrice = new short*[n];
+	result->matrice = new float*[n];
 	for (int i = 0; i < n; i++)
-		result->matrice[i] = new short[n];
+		result->matrice[i] = new float[n];
 
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < n; j++)
@@ -94,10 +94,10 @@ Matrice* Matrice::Adunare(Matrice *firstMatrix, Matrice *secondMatrix)
 	Matrice *result = new Matrice(firstMatrix->n);
 
 	int n = firstMatrix->n;
-	result->matrice = new short*[n];
+	result->matrice = new float*[n];
 
 	for (int i = 0; i < n; i++)
-		result->matrice[i] = new short[n];
+		result->matrice[i] = new float[n];
 
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < n; j++)
@@ -128,9 +128,9 @@ void Matrice::Join(Matrice  *child, int destI, int destJ)
 void Matrice::InmultireStrassen(Matrice * firstMatrix, Matrice * secondMatrix)
 {
 	n = firstMatrix->n;
-	matrice = new short*[n];
+	matrice = new float*[n];
 	for (int i = 0; i < n; i++)
-		matrice[i] = new short[n];
+		matrice[i] = new float[n];
 
 	if (n == 1)
 	{
@@ -247,6 +247,29 @@ void Matrice::profileMethod(void(Matrice::* functie)(Matrice *, Matrice *), Matr
 	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>
 		(std::chrono::high_resolution_clock::now() - start);
 	std::cout << "This took " << duration.count() << " milliseconds " << std::endl;
+}
+
+void Matrice::rotireMatrice()
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < i; j++)
+		{
+			float aux = matrice[i][j];
+			matrice[i][j] = matrice[j][i];
+			matrice[j][i] = aux;
+		}
+	}
+}
+
+void Matrice::covariance()
+{
+	float x = 0.0;
+	for (int i = 0; i < 10; i++)
+	{
+		x += matrice[i][1] * matrice[i][1];
+	}
+	std::cout << x / 9;
 }
 
 

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using Hangman.Model;
 using System.IO;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
+
 
 namespace Hangman.ViewModel
 {
-	class UserViewModel
+	class UserViewModel : BaseViewModel
 	{
 		public ObservableCollection<UserModel> Users
 		{
@@ -17,7 +19,7 @@ namespace Hangman.ViewModel
 			set;
 		}
 
-		public void LoadUsers()
+		public UserViewModel()
 		{
 			var users = new ObservableCollection<UserModel>();
 			StreamReader sr = new StreamReader("users.txt");
@@ -27,23 +29,211 @@ namespace Hangman.ViewModel
 			string[] names = text.Split(new char[] { ' ', '\n' });
 			foreach (string name in names)
 			{
-				users.Add(new UserModel { Name = name, ImagePath = @"C:\image1.bmp" });
+				users.Add(new UserModel { Name = name, ImagePath = @"C:\pictures\image2.jpg" });
 			}
 
-			//users.Add(new UserModel { Name = "Radu", ImagePath = "abc" });
-
 			Users = users;
+
+
+
+			StartGameCommand = new Commands.RelayCommand(createNewGameWindow, param => CanExecuteCommand);
+
+			NextImageCommand = new Commands.RelayCommand(changeToNextPicture, param => CanExecuteCommand);
+
+			PreviousImageCommand = new Commands.RelayCommand(changeToPreviousPicture);
+
+			ImageChangeCommand = new Commands.RelayCommand(changeImage);
 		}
+
+
+
+		private void createNewGameWindow(object obj)
+		{
+
+			Windows.GameWindow gw = new Windows.GameWindow();
+
+			gw.Content = new View.GameControl { DataContext = new ViewModel.GameViewModel(CurrentUser) };
+			gw.Show();
+		}
+
+		private void changeImage(object obj)
+		{
+			var aux = (Model.UserModel)obj;
+			string name = aux.Name;
+			CurrentUser = aux.Name;
+			foreach (UserModel user in Users)
+			{
+				if (user.Name == name)
+				{
+					ImagePath = user.ImagePath;
+				}
+			}
+		}
+
+		public string ReplaceAt(string str, int index, int length, string replace)
+		{
+			return str.Remove(index, Math.Min(length, str.Length - index))
+					.Insert(index, replace);
+		}
+
+		private void changeToPreviousPicture(object obj)
+		{
+			int imageIndex = 0;
+			foreach (char c in imagePath)
+			{
+				if (c >= '0' && c <= '9')
+				{
+					imageIndex = Int32.Parse(c + "");
+				}
+			}
+
+			if (imageIndex > 0)
+			{
+				int aux = imageIndex - 1;
+				ImagePath = ReplaceAt(imagePath, 17, 1, aux.ToString());
+			}
+		}
+
+		private void changeToNextPicture(object obj)
+		{
+
+			int imageIndex = 0;
+			foreach (char c in imagePath)
+			{
+				if (c >= '0' && c <= '9')
+				{
+					imageIndex = Int32.Parse(c + "");
+				}
+			}
+
+			if (imageIndex < 2)
+			{
+				int aux = imageIndex + 1;
+				ImagePath = ReplaceAt(imagePath, 17, 1, aux.ToString());
+			}
+
+
+		}
+
+		private string imagePath = @"C:\pictures\image0.jpg";
+		public string ImagePath
+		{
+			get
+			{
+
+				return imagePath;
+			}
+			set
+			{
+				imagePath = value;
+				OnPropertyChanged("ImagePath");
+			}
+		}
+
+
+
+		public string CurrentUser
+		{
+			get;
+			set;
+		}
+
+
 
 		public string getSelectedUserPath(string name)
 		{
-			foreach(UserModel user in Users)
+			foreach (UserModel user in Users)
 			{
 				if (user.Name == name)
 					return user.ImagePath;
 			}
 			return null;
 		}
+
+
+
+
+		private bool canExecuteCommand = true;
+		public bool CanExecuteCommand
+		{
+			get
+			{
+				return canExecuteCommand;
+			}
+
+			set
+			{
+				if (canExecuteCommand == value)
+				{
+					return;
+				}
+				canExecuteCommand = value;
+			}
+		}
+
+
+		private ICommand imageChangeCommand;
+
+		public ICommand ImageChangeCommand
+		{
+			get
+			{
+				return imageChangeCommand;
+			}
+			set
+			{
+				imageChangeCommand = value;
+			}
+		}
+
+
+
+		private ICommand nextImageCommand;
+
+		public ICommand NextImageCommand
+		{
+			get
+			{
+				return nextImageCommand;
+
+			}
+			set
+			{
+				nextImageCommand = value;
+			}
+		}
+
+		private ICommand previousImageCommand;
+
+		public ICommand PreviousImageCommand
+		{
+			get
+			{
+				return previousImageCommand;
+
+			}
+			set
+			{
+				previousImageCommand = value;
+			}
+		}
+
+
+		private ICommand startGameCommand;
+		public ICommand StartGameCommand
+		{
+			get
+			{
+				return startGameCommand;
+			}
+			set
+			{
+				startGameCommand = value;
+			}
+		}
+
+		private ICommand DeleteUserCommand;
+		private ICommand NewUserCommand;
 
 	}
 }

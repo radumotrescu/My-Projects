@@ -7,10 +7,11 @@ using System.ComponentModel;
 
 namespace Hangman.Model
 {
-	class UserModel : INotifyPropertyChanged
+	class UserModel
 	{
 		private string name;
 		private string imagePath;
+
 
 
 		public string Name
@@ -20,10 +21,10 @@ namespace Hangman.Model
 
 			set
 			{
-				if (name != value)	
+				if (name != value)
 				{
 					name = value;
-					RaisePropertyChanged("Name");
+
 				}
 			}
 		}
@@ -36,20 +37,9 @@ namespace Hangman.Model
 				if (imagePath != value)
 				{
 					imagePath = value;
-					RaisePropertyChanged("ImagePath");
+
 				}
-					
-			}
-		}
 
-
-
-		public event PropertyChangedEventHandler PropertyChanged;
-		private void RaisePropertyChanged(string property)
-		{
-			if (PropertyChanged != null)
-			{
-				PropertyChanged(this, new PropertyChangedEventArgs(property));
 			}
 		}
 	}

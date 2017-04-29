@@ -13,12 +13,14 @@ Generator::~Generator()
 
 }
 
-void Generator::generate(int min, int max, int nr)
+void Generator::generate(int min, int max, int nr1, int nr2)
 {
-	int n = nr*nr;
+	int n = nr1*nr2;
+
 	for (auto i = 0; i < n; i++)
 	{
-		int numar = rand() % max + min;
+		double numar = (double)rand() / RAND_MAX;
+		numar = min + numar*(max - min);
 		listaNumere.push_back(numar);
 	}
 	
