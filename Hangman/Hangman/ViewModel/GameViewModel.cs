@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows.Threading;
+using System.IO;
 
 namespace Hangman.ViewModel
 {
@@ -41,6 +43,8 @@ namespace Hangman.ViewModel
 			Animals = new Commands.RelayCommand(animalsCategory);
 			Sports = new Commands.RelayCommand(sportsCategory);
 			AllCategories = new Commands.RelayCommand(allCategoriesCategory);
+			SaveCommand = new Commands.RelayCommand(saveToFile);
+			OpenCommand = new Commands.RelayCommand(openFromFile);
 		}
 
 		public Model.GameModel Game
@@ -129,8 +133,10 @@ namespace Hangman.ViewModel
 
 		private void checkWord(object obj)
 		{
-			var button = (System.Windows.Controls.Button)obj;
-			string character =(string)button.Content;
+			//var button = (System.Windows.Controls.Button)obj;
+			//string character =(string)button.Content;
+			string character = obj.ToString();
+			System.Windows.MessageBox.Show(character);
 			int index = ToDiscoverWord.IndexOf(character);
 			if (index != -1)
 			{
@@ -142,8 +148,6 @@ namespace Hangman.ViewModel
 					UndiscoveredWord = ReplaceAt(UndiscoveredWord, index, 1, character);
 					index = ToDiscoverWord.IndexOf(character);
 				}
-
-
 				checkWordFinish();
 			}
 			else
@@ -153,16 +157,21 @@ namespace Hangman.ViewModel
 				checkWordFail();
 			}
 			//button.IsEnabled=false;
-			
-
 		}
 
 		private void checkWordFail()
 		{
 			if (Mistakes == 7)
 			{
-				Level = 0;
+				game.setNextWord();
+				
+				Level = 1;
 				Mistakes = 0;
+				imageSource = @"C:\HangmanImages\image0.jpg";
+				OnPropertyChanged("ImageSource");
+				OnPropertyChanged("UndiscoveredWord");
+				OnPropertyChanged("Level");
+				OnPropertyChanged("Mistakes");
 				System.Windows.MessageBox.Show("Ai pierdut!");
 			}
 		}
@@ -172,8 +181,24 @@ namespace Hangman.ViewModel
 			int index = UndiscoveredWord.IndexOf('_');
 			if(index==-1)
 			{
-				Level++;
-				Mistakes = 0;
+				if(Level!=5)
+				{
+					System.Windows.MessageBox.Show("Cuvantul a fost " + game.UndiscoveredWord);
+					game.setNextWord();
+					
+					Level++;
+					Mistakes = 0;
+					imageSource = @"C:\HangmanImages\image0.jpg";
+					OnPropertyChanged("ImageSource");
+					OnPropertyChanged("UndiscoveredWord");
+					OnPropertyChanged("Level");
+					OnPropertyChanged("Mistakes");
+				}
+				else
+				{
+					System.Windows.MessageBox.Show("Ai castigat!");
+				}
+				
 			}
 		}
 		private void nextPicture()
@@ -194,7 +219,7 @@ namespace Hangman.ViewModel
 			}
 		}
 
-		private int mistakes = 0;
+
 		public int Mistakes
 		{
 			get { return game.Mistakes; }
@@ -249,7 +274,87 @@ namespace Hangman.ViewModel
 			}
 		}
 
+		private ICommand saveCommand;
 
+		public ICommand SaveCommand
+		{
+			get
+			{ return saveCommand; }
+			set
+			{
+				saveCommand = value;
+			}
+		}
+
+
+		private ICommand openCommand;
+
+		public ICommand OpenCommand
+		{
+			get
+			{ return openCommand; }
+			set
+			{
+				openCommand = value;
+			}
+		}
+
+
+
+		private void saveToFile(object obj)
+		{
+			
+			string filePath = String.Format(@"d:\users\{0}.txt", userName);
+			System.IO.File.WriteAllText(filePath, string.Empty);
+			StreamWriter sw = new StreamWriter(filePath);
+			System.Windows.MessageBox.Show("Fisierul a fost salvat");
+			StringBuilder sb = new StringBuilder();
+			sb.AppendLine(UserName);
+			sb.AppendLine(Category);
+			sb.AppendLine(Level.ToString());
+			sb.AppendLine(Mistakes.ToString());
+			sb.AppendLine(ImageSource);
+			sb.AppendLine(UndiscoveredWord);
+			sb.AppendLine(game.ToDiscoverWord);
+
+			sw.Write(sb.ToString());
+
+			sw.Close();
+		}
+
+		private void openFromFile(object obj)
+		{
+			string filePath = String.Format(@"d:\users\{0}.txt", userName);
+			StreamReader sr = new StreamReader(filePath);
+			string text = sr.ReadToEnd();
+			sr.Close();
+
+			string[] infos = text.Split(new char[] { ' ', '\n', '\r' });
+			List<string> words = new List<string>();
+
+			foreach (string info in infos)
+			{
+				if (info.Length != 0)
+					words.Add(info);
+			}
+
+
+			UserName = words[0];
+			Category = words[1];
+			Level = int.Parse(words[2]);
+			Mistakes = int.Parse(words[3]);
+			ImageSource = words[4];
+			UndiscoveredWord = words[5];
+			game.ToDiscoverWord = words[6];
+
+			OnPropertyChanged("UserName");
+			OnPropertyChanged("Category");
+			OnPropertyChanged("Level");
+			OnPropertyChanged("Mistakes");
+			OnPropertyChanged("ImageSource");
+			OnPropertyChanged("UndiscoveredWord");
+			
+		}
 
 	}
 }

@@ -5,8 +5,7 @@
 #include <string>
 #include <chrono>
 
-class Matrice
-{
+class Matrice {
 
 public:
 
@@ -19,16 +18,33 @@ public:
 	void InmultireNormala(Matrice *firstMatrix, Matrice *secondMatrix);
 	static Matrice* Scadere(Matrice *firstMatrix, Matrice *secondMatrix);
 	static Matrice* Adunare(Matrice *firstMatrix, Matrice *secondMatrix);
+	void MinusMatrix();
 	void Split(Matrice *destination, int destI, int destJ);
 	void Join(Matrice *destination, int destI, int destJ);
 	void InmultireStrassen(Matrice *firstMatrix, Matrice *secondMatrix);
 	void profileMethod(void(Matrice::*functie)(Matrice*, Matrice*), Matrice *firstMatrix, Matrice *secondMatrix);
+	void profileMethod(void(Matrice::*functie)(Matrice*), Matrice *Matrix);
 	void rotireMatrice();
-	void covariance();
 
+
+	long long int determinant();
+	void swapRow(Matrice *matrix, int row1, int row2);
+
+	void normalInversion();
+
+	void tryNormal();
+
+	void getTransposeMatrix();
+	Matrice* getMinor(int row, int col);
+	void Matrice::swapRow(int **matrix, int row1, int row2);
+	double determinant2();
+
+	void StrassenInversion(Matrice *Matrix);
 
 private:
-	float **matrice;
+	double **matrice;
+
+	// the dimension NxN of the matrix
 	int n;
 
 

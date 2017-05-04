@@ -1,4 +1,5 @@
-Radu
-Motrescu
-Luiza
-Alle <3 
+Radu C:\\ProfileImages\\image0.jpg
+Motrescu C:\\ProfileImages\\image1.jpg
+Luiza C:\\ProfileImages\\image2.jpg
+Alle C:\\ProfileImages\\image3.jpg
+OMG C:\\ProfileImages\\image2.jpg

@@ -23,7 +23,8 @@ namespace Hangman.Model
 				var text = sr.ReadToEnd();
 				sr.Close();
 				string[] names = text.Split(new char[] { ' ', '\n', '\r' });
-
+				Mistakes = 0;
+				Level = 1;
 				foreach (string name in names)
 				{
 					if (name.Length != 0)
@@ -48,7 +49,8 @@ namespace Hangman.Model
 				sr.Close();
 				allText += text;
 				allText += '\n';
-
+				Mistakes = 0;
+				Level = 1;
 				string[] names = allText.Split(new char[] { ' ', '\n', '\r' });
 
 				foreach (string name in names)
@@ -78,8 +80,6 @@ namespace Hangman.Model
 				sb.Append("_");
 			}
 			UndiscoveredWord = sb.ToString();
-			Level = 1;
-			Mistakes = 0;
 
 		}
 

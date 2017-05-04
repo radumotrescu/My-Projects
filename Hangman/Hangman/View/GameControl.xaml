@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Hangman.ViewModel"
-             mc:Ignorable="d" Height="712" Width="1347.5">
+             mc:Ignorable="d" Height="608" Width="1359.5">
 
 	<UserControl.Resources>
 		<Style TargetType="Button">
@@ -19,8 +19,8 @@
 		<Menu x:Name="Menu" FontSize="12" Margin="0,0,-2,0" Grid.Row="0" Grid.ColumnSpan="3" >
 			<MenuItem Header="_File" >
 				<MenuItem x:Name="New" Header="New Game" Command="{Binding NewGame}"/>
-				<MenuItem x:Name="Open" Header="Open Game" />
-				<MenuItem x:Name="Save" Header="Save Game" />
+				<MenuItem x:Name="Open" Header="Open Game" Command="{Binding OpenCommand}"/>
+				<MenuItem x:Name="Save" Header="Save Game" Command="{Binding SaveCommand}"/>
 				<MenuItem x:Name="Statistics" Header="Statistics" />
 				<MenuItem x:Name="Exit" Header="Exit" />
 			</MenuItem>
@@ -36,7 +36,7 @@
 		</Menu>
 
 
-		<Grid Name="keyboard" Background="Blue" Margin="320,152,10,220">
+		<Grid Name="keyboard" Background="Blue" Margin="313,89,-2,0">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="1*"></RowDefinition>
 				<RowDefinition Height="1*"></RowDefinition>
@@ -55,68 +55,35 @@
 			</Grid.ColumnDefinitions>
 			<Button Name="ButtonA" Grid.Row="0" Grid.Column="0" Content="A" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
 
-
-
-
 			<Button Name="ButtonB" Grid.Row="0" Grid.Column="1" Content="B" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
-
-
-
 
 			<Button Name="ButtonC" Grid.Row="0" Grid.Column="2" Content="C" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
 
-
 			<Button Name="ButtonD" Grid.Row="0" Grid.Column="3" Content="D" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
-
-
 
 			<Button Name="ButtonE" Grid.Row="0" Grid.Column="4" Content="E" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
 
-
 			<Button Name="ButtonF" Grid.Row="0" Grid.Column="5" Content="F" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
-
-
 
 			<Button Name="ButtonG" Grid.Row="0" Grid.Column="6" Content="G" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
 
-
-
 			<Button Name="ButtonH" Grid.Row="0" Grid.Column="7" Content="H" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
-
-
 
 			<Button Name="ButtonI" Grid.Row="0" Grid.Column="8" Content="I" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
 
-
-
 			<Button Name="ButtonJ" Grid.Row="1" Grid.Column="0" Content="J" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
-
-
 
 			<Button Name="ButtonK" Grid.Row="1" Grid.Column="1" Content="K" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
 
-
 			<Button Name="ButtonL" Grid.Row="1" Grid.Column="2" Content="L" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
-
 
 			<Button Name="ButtonM" Grid.Row="1" Grid.Column="3" Content="M" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
 
-
-
 			<Button Name="ButtonN" Grid.Row="1" Grid.Column="4" Content="N" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
-
-
-
 
 			<Button Name="ButtonO" Grid.Row="1" Grid.Column="5" Content="O" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
 
-
-
-
 			<Button Name="ButtonP" Grid.Row="1" Grid.Column="6" Content="P" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
-
-
-
 
 			<Button Name="ButtonQ" Grid.Row="1" Grid.Column="7" Content="Q" Command="{Binding Command}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" />
 
@@ -153,12 +120,15 @@
 
 		</Grid>
 
-		<Image x:Name="image" HorizontalAlignment="Left" Height="353" VerticalAlignment="Top" Width="269" Margin="32,161,0,0" Source="{Binding Path=ImageSource}"/>
-		<TextBlock x:Name="category" HorizontalAlignment="Left" Margin="52,646,0,0" TextWrapping="Wrap" Text="{Binding Path= Category}" VerticalAlignment="Top" Height="35" Width="141"/>
-		<TextBlock x:Name="undiscoveredWord" HorizontalAlignment="Left" Margin="389,659,0,0" TextWrapping="Wrap" Text="{Binding Path = UndiscoveredWord}" VerticalAlignment="Top" Height="35" Width="141"/>
-		<TextBlock x:Name="userName" HorizontalAlignment="Left" Margin="72,37,0,0" TextWrapping="Wrap" Text="{Binding Path = UserName}" VerticalAlignment="Top"/>
-		<TextBlock x:Name="level" HorizontalAlignment="Left" Margin="295,34,0,0" TextWrapping="Wrap" Text="{Binding Path= Level}" VerticalAlignment="Top"/>
-		<TextBlock x:Name="mistakes" HorizontalAlignment="Left" Margin="389,34,0,0" TextWrapping="Wrap" Text="{Binding Path= Mistakes}" VerticalAlignment="Top"/>
+		<Image x:Name="image" HorizontalAlignment="Left" Height="353" VerticalAlignment="Top" Width="269" Margin="10,89,0,0" Source="{Binding Path=ImageSource}"/>
+		<TextBlock x:Name="category" HorizontalAlignment="Left" Margin="14,554,0,0" TextWrapping="Wrap" Text="{Binding Path= Category}" VerticalAlignment="Top" Height="35" Width="141"/>
+		<TextBlock x:Name="undiscoveredWord" HorizontalAlignment="Left" Margin="167,554,0,0" TextWrapping="Wrap" Text="{Binding Path = UndiscoveredWord}" VerticalAlignment="Top" Height="35" Width="141"/>
+		<TextBlock x:Name="userName" HorizontalAlignment="Left" Margin="32,34,0,0" TextWrapping="Wrap" Text="{Binding Path = UserName}" VerticalAlignment="Top" Height="38" Width="122"/>
+		<TextBlock x:Name="level" HorizontalAlignment="Left" Margin="235,34,0,0" TextWrapping="Wrap" Text="{Binding Path= Level}" VerticalAlignment="Top" Height="38" Width="94"/>
+		<TextBlock x:Name="mistakes" HorizontalAlignment="Left" Margin="401,32,0,0" TextWrapping="Wrap" Text="{Binding Path= Mistakes}" VerticalAlignment="Top" Height="38" Width="138"/>
+		<TextBlock x:Name="labelLevel" Text="Level: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="175,34,0,0" Height="38" Width="60"/>
+		<TextBlock x:Name="labelMistakes" Text="Mistakes: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="341,34,0,0" Height="38" Width="60"/>
+
 	</Grid>
 
 </UserControl>

@@ -26,11 +26,23 @@ namespace Hangman.ViewModel
 			string text = sr.ReadToEnd();
 			sr.Close();
 
-			string[] names = text.Split(new char[] { ' ', '\n' });
+			string[] names = text.Split(new char[] { ' ', '\n', '\r' });
+			List<string> words = new List<string>();
+
 			foreach (string name in names)
 			{
-				users.Add(new UserModel { Name = name, ImagePath = @"C:\pictures\image2.jpg" });
+				if (name.Length != 0)
+					words.Add(name);
 			}
+
+
+			for (int i = 0; i < words.Count; i += 2)
+			{
+				string nameAux = words[i];
+				string imagePathAux = words[i + 1];
+				users.Add(new UserModel { Name = nameAux, ImagePath = imagePathAux });
+			}
+
 
 			Users = users;
 
@@ -43,6 +55,10 @@ namespace Hangman.ViewModel
 			PreviousImageCommand = new Commands.RelayCommand(changeToPreviousPicture);
 
 			ImageChangeCommand = new Commands.RelayCommand(changeImage);
+
+			NewUserCommand = new Commands.RelayCommand(saveNewUser);
+
+
 		}
 
 
@@ -90,7 +106,7 @@ namespace Hangman.ViewModel
 			if (imageIndex > 0)
 			{
 				int aux = imageIndex - 1;
-				ImagePath = ReplaceAt(imagePath, 17, 1, aux.ToString());
+				ImagePath = ReplaceAt(imagePath, 24, 1, aux.ToString());
 			}
 		}
 
@@ -106,16 +122,16 @@ namespace Hangman.ViewModel
 				}
 			}
 
-			if (imageIndex < 2)
+			if (imageIndex < 8)
 			{
 				int aux = imageIndex + 1;
-				ImagePath = ReplaceAt(imagePath, 17, 1, aux.ToString());
+				ImagePath = ReplaceAt(imagePath, 24, 1, aux.ToString());
 			}
 
 
 		}
 
-		private string imagePath = @"C:\pictures\image0.jpg";
+		private string imagePath = "C:\\\\ProfileImages\\\\image0.jpg";
 		public string ImagePath
 		{
 			get
@@ -133,6 +149,12 @@ namespace Hangman.ViewModel
 
 
 		public string CurrentUser
+		{
+			get;
+			set;
+		}
+
+		public string NewUserName
 		{
 			get;
 			set;
@@ -232,8 +254,37 @@ namespace Hangman.ViewModel
 			}
 		}
 
+		private ICommand newUserCommand;
+
+		public ICommand NewUserCommand
+		{
+			get
+			{
+				return newUserCommand;
+			}
+
+			set
+			{
+				newUserCommand = value;
+			}
+		}
+
+		private void saveNewUser(object obj)
+		{
+			StreamReader sr = new StreamReader("users.txt");
+			var text = sr.ReadToEnd();
+			text += '\n';
+			text += NewUserName + " " + ImagePath;
+			sr.Close();
+			System.IO.File.WriteAllText("users.txt", string.Empty);
+			StreamWriter sw = new StreamWriter("users.txt");
+			sw.Write(text);
+			sw.Close();
+			
+		}
+
 		private ICommand DeleteUserCommand;
-		private ICommand NewUserCommand;
+		
 
 	}
 }

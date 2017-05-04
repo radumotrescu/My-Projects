@@ -10,7 +10,7 @@ class Generator
 public:
 	Generator();
 	~Generator();
-	void generate(int min, int max, int nr1, int nr2);
+	void generate(int min, int max, int nr);
 	void clear();
 	void scrieFisier(std::string numeFisier);
 
