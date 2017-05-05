@@ -124,7 +124,7 @@ namespace Hangman.ViewModel
 
 
 
-		public string ReplaceAt(string str, int index, int length, string replace)
+		private string ReplaceAt(string str, int index, int length, string replace)
 		{
 			return str.Remove(index, Math.Min(length, str.Length - index))
 					.Insert(index, replace);

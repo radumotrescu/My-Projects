@@ -30,14 +30,13 @@ public:
 	long long int determinant();
 	void swapRow(Matrice *matrix, int row1, int row2);
 
-	void normalInversion();
 
-	void tryNormal();
+	void normalInversion(Matrice* matrix);
 
 	void getTransposeMatrix();
 	Matrice* getMinor(int row, int col);
 	void Matrice::swapRow(int **matrix, int row1, int row2);
-	double determinant2();
+
 
 	void StrassenInversion(Matrice *Matrix);
 

@@ -148,7 +148,7 @@ void Matrice::InmultireStrassen(Matrice * firstMatrix, Matrice * secondMatrix)
 
 		//std::cout << firstMatrix->matrice[0][0] << " " << secondMatrix->matrice[0][0] << " " << matrice[0][0] <<std:: endl;
 	}
-	if (n <= 128)
+	if (n <= 128) // set leaf-seize here
 	{
 		InmultireNormala(firstMatrix, secondMatrix);
 	}
@@ -251,7 +251,6 @@ void Matrice::InmultireStrassen(Matrice * firstMatrix, Matrice * secondMatrix)
 void Matrice::StrassenInversion(Matrice * matrix)
 {
 
-
 	n = matrix->n;
 	matrice = new double*[n];
 	for (int i = 0; i < n; i++)
@@ -261,10 +260,10 @@ void Matrice::StrassenInversion(Matrice * matrix)
 	{
 		matrice[0][0] = 1 / matrix->matrice[0][0];
 	}
-	//if (n <= 32)
-	//{
-	//	matrix->normalInversion();
-	//}
+	if (n <= 32) // set leaf-size here
+	{
+		normalInversion(matrix);
+	}
 	else
 	{
 		Matrice *A11 = new Matrice(n / 2);
@@ -302,28 +301,17 @@ void Matrice::StrassenInversion(Matrice * matrix)
 		S->matriceVida();
 
 		R1->StrassenInversion(A11);
-
-
 		R2->InmultireStrassen(A21, R1);
-
 		R3->InmultireStrassen(R1, A12);
-
-
 		R4->InmultireStrassen(A21, R3);
-
-
 		S = Scadere(A22, R4);
-
-
 		R5->StrassenInversion(S);
 
 
 		Matrice *C1 = new Matrice(n / 2);
 		C1->matriceVida();
-
 		Matrice *C2 = new Matrice(n / 2);
 		C2->matriceVida();
-
 		Matrice *C3 = new Matrice(n / 2);
 		C3->matriceVida();
 		Matrice *C4 = new Matrice(n / 2);
@@ -331,21 +319,13 @@ void Matrice::StrassenInversion(Matrice * matrix)
 
 
 		C4 = R5;
-
 		C2->InmultireStrassen(R3, R5);
 		C2->MinusMatrix();
-
 		C3->InmultireStrassen(R5, R2);
 		C3->MinusMatrix();
-
 		R6->InmultireStrassen(C2, R2);
-
 		C1 = Scadere(R1, R6);
 
-		//C1->afisareEcran();
-		//C2->afisareEcran();	
-		//C3->afisareEcran();
-		//C4->afisareEcran();
 		Join(C1, 0, 0);
 		Join(C2, 0, n / 2);
 		Join(C3, n / 2, 0);
@@ -433,13 +413,6 @@ long long int Matrice::determinant()
 			copy[i][j] = (int)matrice[i][j];
 	}
 
-	//for (int i = 0; i < n; i++)
-	//{
-	//	for (int j = 0; j < n; j++)
-	//		std::cout << copy[i][j] << " ";
-	//	std::cout << std::endl;
-	//}
-
 	long long int result = 1;
 	for (int j = 0; j < n; j++)
 	{
@@ -481,33 +454,14 @@ long long int Matrice::determinant()
 				}
 			}
 		}
-		//copy->afisareEcran();
-		//std::cout << "OMG" << std::endl;
-		//for (int i = 0; i < n; i++)
-		//{
-		//	for (int j = 0; j < n; j++)
-		//		std::cout << copy[i][j] << " ";
-		//	std::cout << std::endl;
 
-		//}
-		//std::cout << "OMG" << std::endl;
 	}
 
-	//for (int i = 0; i < n; i++)
-	//{
-	//	for (int j = 0; j < n; j++)
-	//		std::cout << copy[i][j] << " ";
-	//	std::cout << std::endl;
-
-	//}
-	//copy->afisareEcran();
-	//std::cout << "OMG" << std::endl;
 	for (int i = 0; i < n; i++)
 	{
 		result *= copy[i][i];
 	}
-	//if (result < 0)
-	//	return -result;
+
 	delete[] copy;
 	return result;
 
@@ -555,188 +509,89 @@ Matrice* Matrice::getMinor(int row, int col)
 
 	}
 
-	//for (int i = 0; i < n - 1; i++)
-	//{
-	//	for (int j = 0; j < n - 1; j++)
-	//		std::cout << minor[i][j] << " ";
-	//	std::cout << std::endl;
-	//}
-	//std::cout << std::endl;
-
 	return minor;
 }
 
-//double Matrice::determinant2(double d)
-//{
-//	
-//		int c, subi, i, j, subj;
-//		double submat[10][10];
-//		if (n == 2)
-//		{
-//			return((mat[0][0] * mat[1][1]) - (mat[1][0] * mat[0][1]));
-//		}
-//		else
-//		{
-//			for (c = 0; c < n; c++)
-//			{
-//				subi = 0;
-//				for (i = 1; i < n; i++)
-//				{
-//					subj = 0;
-//					for (j = 0; j < n; j++)
-//					{
-//						if (j == c)
-//						{
-//							continue;
-//						}
-//						submat[subi][subj] = mat[i][j];
-//						subj++;
-//					}
-//					subi++;
-//				}
-//				d = d + (pow(-1, c) * mat[0][c] * det(n - 1, submat));
-//			}
-//		}
-//		return d;
-//	
-//}
 
 
 
-
-void Matrice::normalInversion()
+void Matrice::normalInversion(Matrice *matriceAux)
 {
-
-	auto start = std::chrono::high_resolution_clock::now();
-
-	
-
-	
-	int det = determinant();
-	std::cout << det << std::endl;
-
-
-	Matrice* inverted = new Matrice(n);
-	inverted->matriceVida();
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			Matrice* minor = new Matrice(n - 1);
-			minor->matriceVida();
-			minor = getMinor(i, j);
-			//minor->afisareEcran();
-			//this->afisareEcran();
-			long long int var = minor->determinant();
-			//std::cout << var << " " <<i << " " << j << std::endl;
-			//std::cout << std::endl;
-			inverted->matrice[i][j] = var;
-			minor->~Matrice();
-		}
-	}
 	//afisareEcran();
-
-	for (int i = 0; i < n; i++)
+	//std::cout << std::endl;
+	auto det = matriceAux->determinant();
+	//std::cout << det << std::endl;
+	if (det!=0)
 	{
-		for (int j = 0; j < n; j++)
-			matrice[i][j] = inverted->matrice[i][j];
-	}
+		
 
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
+		double** matrix = new double*[n];
+		for (int i = 0; i < n; i++)
 		{
-			if ((i + j) % 2 == 1)
+			matrix[i] = new double[2 * n];
+		}
+
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < n; j++)
+				matrix[i][j] = matriceAux->matrice[i][j];
+		}
+
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = n; j < 2 * n; j++)
 			{
-				matrice[i][j] = -matrice[i][j];
+				if (i == (j - n))
+					matrix[i][j] = 1.0;
+				else
+					matrix[i][j] = 0.0;
 			}
 		}
-	}
 
-	getTransposeMatrix();
 
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
+
+		for (int i = 0; i < n; i++)
 		{
-			matrice[i][j] = matrice[i][j] / det;
-		}
-	}
-
-	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>
-		(std::chrono::high_resolution_clock::now() - start);
-	std::cout << "This took " << duration.count() << " milliseconds " << std::endl;
-
-	//for (int i = 0; i < n; i++)
-	//{
-	//	for (int j = 0; j < n; j++)
-	//		std::cout << matrice[i][j] << " ";
-	//	std::cout << std::endl;
-	//}
-	//std::cout << std::endl;
-	//std::cout << det;
-
-}
-
-void Matrice::tryNormal()
-{
-	auto start = std::chrono::high_resolution_clock::now();
-
-	double** matrix = new double*[n];
-	for (int i = 0; i < n; i++)
-	{
-		matrix[i] = new double[2 * n];
-	}
-
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-			matrix[i][j] = matrice[i][j];
-	}
-
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = n; j < 2 * n; j++)
-		{
-			if (i == (j - n))
-				matrix[i][j] = 1.0;
-			else
-				matrix[i][j] = 0.0;
-		}
-	}
-
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			if (i != j)
+			for (int j = 0; j < n; j++)
 			{
-				double ratio = matrix[j][i] / matrix[i][i];
-				for (int k = 0; k < 2 * n; k++)
+				if (i != j)
 				{
-					matrix[j][k] -= ratio * matrix[i][k];
+					double ratio = matrix[j][i] / matrix[i][i];
+					for (int k = 0; k < 2 * n; k++)
+					{
+						matrix[j][k] -= ratio * matrix[i][k];
+					}
 				}
 			}
 		}
-	}
 
-	for (int i = 0; i < n; i++)
-	{
-		double a = matrix[i][i];
-		for (int j = 0; j < 2 * n; j++)
+		//for (int i = 0; i < n; i++)
+		//{
+		//	for (int j = 0; j < 2 * n; j++)
+
+		//		std::cout << matrix[i][j] << " ";
+		//	std::cout << std::endl;
+		//}
+
+		for (int i = 0; i < n; i++)
 		{
-			matrix[i][j] /= a;
+			double a = matrix[i][i];
+			for (int j = 0; j < 2 * n; j++)
+			{
+				matrix[i][j] /= a;
+			}
+		}
+
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = n; j < 2 * n; j++)
+				matrice[i][j - n] = matrix[i][j];
+
 		}
 	}
-
-	for (int i = 0; i < n; i++)
+	else
 	{
-		for (int j = n; j < 2 * n; j++)
-			matrice[i][j-n] = matrix[i][j];
-		
+		std::cout << "Determinantul este 0";
 	}
 
-	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>
-		(std::chrono::high_resolution_clock::now() - start);
-	std::cout << "This took " << duration.count() << " milliseconds " << std::endl;
 }
