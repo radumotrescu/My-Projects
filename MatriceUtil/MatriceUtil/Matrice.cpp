@@ -216,7 +216,7 @@ void Matrice::InmultireStrassen(Matrice * firstMatrix, Matrice * secondMatrix)
 		M6->InmultireStrassen(Scadere(A21, A11), Adunare(B11, B12));
 		M7->InmultireStrassen(Scadere(A12, A22), Adunare(B21, B22));
 
-
+		
 		/**
 		C11 = M1 + M4 - M5 + M7
 		C12 = M3 + M5
@@ -521,9 +521,9 @@ void Matrice::normalInversion(Matrice *matriceAux)
 	//std::cout << std::endl;
 	auto det = matriceAux->determinant();
 	//std::cout << det << std::endl;
-	if (det!=0)
+	if (det != 0)
 	{
-		
+
 
 		double** matrix = new double*[n];
 		for (int i = 0; i < n; i++)
@@ -552,6 +552,14 @@ void Matrice::normalInversion(Matrice *matriceAux)
 
 		for (int i = 0; i < n; i++)
 		{
+			//for (int i = 0; i < n; i++)
+			//{
+			//	for (int j = 0; j < 2 * n; j++)
+
+			//		std::cout << matrix[i][j] << " ";
+			//	std::cout << std::endl;
+			//}
+			//std::cout << std::endl;
 			for (int j = 0; j < n; j++)
 			{
 				if (i != j)
@@ -572,9 +580,21 @@ void Matrice::normalInversion(Matrice *matriceAux)
 		//		std::cout << matrix[i][j] << " ";
 		//	std::cout << std::endl;
 		//}
+		//std::cout << std::endl;
+		//std::cout << "-------------------" << std::endl;
 
 		for (int i = 0; i < n; i++)
 		{
+			//for (int i = 0; i < n; i++)
+			//{
+			//	for (int j = 0; j < 2 * n; j++)
+
+			//		std::cout << matrix[i][j] << " ";
+			//	std::cout << std::endl;
+			//}
+			//std::cout << std::endl;
+
+
 			double a = matrix[i][i];
 			for (int j = 0; j < 2 * n; j++)
 			{
@@ -591,7 +611,7 @@ void Matrice::normalInversion(Matrice *matriceAux)
 	}
 	else
 	{
-		std::cout << "Determinantul este 0";
+		std::cout << "Determinantul este 0" << std::endl;
 	}
 
 }

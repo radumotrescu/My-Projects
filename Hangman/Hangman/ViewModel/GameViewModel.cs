@@ -133,10 +133,9 @@ namespace Hangman.ViewModel
 
 		private void checkWord(object obj)
 		{
-			//var button = (System.Windows.Controls.Button)obj;
-			//string character =(string)button.Content;
-			string character = obj.ToString();
-			System.Windows.MessageBox.Show(character);
+			var button = (System.Windows.Controls.Button)obj;
+			string character = (string)button.Content;
+			//System.Windows.MessageBox.Show(character);
 			int index = ToDiscoverWord.IndexOf(character);
 			if (index != -1)
 			{
