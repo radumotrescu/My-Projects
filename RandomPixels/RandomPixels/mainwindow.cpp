@@ -11,6 +11,8 @@ MainWindow::MainWindow(QWidget* parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow) {
   ui->setupUi(this);
+
+
   std::srand(time(NULL));
 
 
@@ -25,6 +27,7 @@ MainWindow::MainWindow(QWidget* parent) :
   }
 
   connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(generateRandomPixels()));
+
 }
 
 void MainWindow::generateRandomPixels() {
@@ -38,6 +41,7 @@ void MainWindow::generateRandomPixels() {
     }
 
   QGraphicsPixmapItem* item = new QGraphicsPixmapItem(QPixmap::fromImage(image));
+
   QGraphicsScene* scene = new QGraphicsScene();
 
   scene->addItem(item);

@@ -31,6 +31,8 @@ class MainWindow : public QMainWindow {
       return QColor(R, G, B);
     }
   };
+
+
   std::vector<Color> colorList;
 
  private slots:
