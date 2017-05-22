@@ -278,7 +278,7 @@ namespace Hangman.ViewModel
 			sr.Close();
 			System.IO.File.WriteAllText("users.txt", string.Empty);
 			StreamWriter sw = new StreamWriter("users.txt");
-			sw.Write(text);
+			sw.WriteLine(text);
 			sw.Close();
 			
 		}
