@@ -196,4 +196,4 @@ turtleScreen.setx(-300)
 turtleScreen.sety(20)
 turtleScreen.pendown()
 
-
+root.mainloop()
