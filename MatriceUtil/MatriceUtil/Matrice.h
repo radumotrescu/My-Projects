@@ -9,7 +9,7 @@ class Matrice {
 
 public:
 
-	Matrice(int n);
+	explicit Matrice(int  n);
 	~Matrice();
 	void citire(std::string numeFisier);
 	void matriceVida();

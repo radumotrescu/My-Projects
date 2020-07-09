@@ -1,0 +1,2737 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Solution_Path">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="SolutionPath" type="xs:string" minOccurs="0" />
+                <xs:element name="SolutionVersion" type="xs:string" minOccurs="0" />
+                <xs:element name="PlogVersion" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="ModificationDate" msdata:DateTimeMode="Utc" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="PVS-Studio_Analysis_Log">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FavIcon" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Level" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="DefaultOrder" type="xs:int" minOccurs="0" />
+                <xs:element name="ErrorCode" type="xs:string" minOccurs="0" />
+                <xs:element name="Message" type="xs:string" />
+                <xs:element name="Project" type="xs:string" minOccurs="0" />
+                <xs:element name="ShortFile" type="xs:string" minOccurs="0" />
+                <xs:element name="Line" type="xs:int" />
+                <xs:element name="FalseAlarm" type="xs:boolean" minOccurs="0" />
+                <xs:element name="File" type="xs:string" />
+                <xs:element name="CodePrev" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="CodeCurrent" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="CodeNext" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="TrialMessage" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Analyzer" type="xs:int" minOccurs="0" />
+                <xs:element name="LineExtension" type="xs:string" minOccurs="0" />
+                <xs:element name="Retired" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="AnalyzedSourceFiles" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//PVS-Studio_Analysis_Log" />
+        <xs:field xpath="Line" />
+        <xs:field xpath="Message" />
+        <xs:field xpath="File" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Solution_Path>
+    <SolutionPath>C:\GitHubProjects\MatriceUtil\MatriceUtil.sln</SolutionPath>
+    <SolutionVersion>14.0</SolutionVersion>
+    <PlogVersion>4</PlogVersion>
+    <ModificationDate>2017-06-15T20:58:45.8514338Z</ModificationDate>
+  </Solution_Path>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>1</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.h</ShortFile>
+    <Line>44</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.h</File>
+    <CodePrev>11496</CodePrev>
+    <CodeCurrent>2355029</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\githubprojects\matriceutil\matriceutil\main.cpp*c:\githubprojects\matriceutil\matriceutil\matrice.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>2</DefaultOrder>
+    <ErrorCode>V107</ErrorCode>
+    <Message>Implicit type conversion first argument 'time(0)' of function 'srand' to 32-bit type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>generator.cpp</ShortFile>
+    <Line>7</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\generator.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>361476173</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>3</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>19</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>1756309564</CodePrev>
+    <CodeCurrent>157152481</CodeCurrent>
+    <CodeNext>20124011</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>4</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>21</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>622197041</CodeCurrent>
+    <CodeNext>20124011</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>5</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>21</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>622197041</CodeCurrent>
+    <CodeNext>20124011</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>6</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>25</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>20825665</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>7</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>25</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>20825665</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>8</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>32</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>2255445</CodePrev>
+    <CodeCurrent>157152481</CodeCurrent>
+    <CodeNext>20124011</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>9</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>34</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>622197041</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>10</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>34</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>622197041</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>11</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: this-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>43</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>655648127</CodeCurrent>
+    <CodeNext>2137491</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>12</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: this-&gt;matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>43</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>655648127</CodeCurrent>
+    <CodeNext>2137491</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>13</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: this-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>56</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>118776876</CodeCurrent>
+    <CodeNext>90971539</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>14</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: this-&gt;matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>56</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>118776876</CodeCurrent>
+    <CodeNext>90971539</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>15</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: firstMatrix-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>69</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20119675</CodePrev>
+    <CodeCurrent>1962697316</CodeCurrent>
+    <CodeNext>9725661</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>16</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: firstMatrix-&gt;matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>69</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20119675</CodePrev>
+    <CodeCurrent>1962697316</CodeCurrent>
+    <CodeNext>9725661</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>17</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: secondMatrix-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>69</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20119675</CodePrev>
+    <CodeCurrent>1962697316</CodeCurrent>
+    <CodeNext>9725661</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>18</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: secondMatrix-&gt;matrice[k][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>69</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20119675</CodePrev>
+    <CodeCurrent>1962697316</CodeCurrent>
+    <CodeNext>9725661</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>19</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>70</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>1962697316</CodePrev>
+    <CodeCurrent>9725661</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>20</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>70</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>1962697316</CodePrev>
+    <CodeCurrent>9725661</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>21</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>81</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>3764253931</CodeCurrent>
+    <CodeNext>20124011</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>22</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: result-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>83</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>2165700890</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>23</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>83</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>2165700890</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>24</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: result-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>88</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3304657413</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>25</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: result-&gt;matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>88</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3304657413</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>26</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: firstMatrix-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>88</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3304657413</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>27</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: firstMatrix-&gt;matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>88</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3304657413</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>28</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: secondMatrix-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>88</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3304657413</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>29</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: secondMatrix-&gt;matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>88</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3304657413</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>30</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>98</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>41524823</CodePrev>
+    <CodeCurrent>3764253931</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>31</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: result-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>101</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>2165700890</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>32</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>101</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>2165700890</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>33</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: result-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>106</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2767786501</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>34</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: result-&gt;matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>106</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2767786501</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>35</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: firstMatrix-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>106</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2767786501</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>36</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: firstMatrix-&gt;matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>106</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2767786501</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>37</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: secondMatrix-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>106</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2767786501</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>38</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: secondMatrix-&gt;matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>106</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2767786501</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>39</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>116</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2736883269</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>40</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>116</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2736883269</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>41</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: child-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>126</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>15077864</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>42</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: child-&gt;matrice[i1][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>126</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>15077864</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>43</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>126</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>15077864</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>44</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i2][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>126</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>15077864</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>45</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>135</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>375460421</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>46</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i2][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>135</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>375460421</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>47</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: child-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>135</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>375460421</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>48</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: child-&gt;matrice[i1][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>135</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>375460421</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>49</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>142</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>6397527</CodePrev>
+    <CodeCurrent>157152481</CodeCurrent>
+    <CodeNext>20124011</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>50</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>144</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>622197041</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>51</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>144</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>622197041</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>52</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>256</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>201303</CodePrev>
+    <CodeCurrent>157152481</CodeCurrent>
+    <CodeNext>20124011</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>53</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>258</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>622197041</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>54</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>258</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20124011</CodePrev>
+    <CodeCurrent>622197041</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>55</DefaultOrder>
+    <ErrorCode>V112</ErrorCode>
+    <Message>Dangerous magic number 32 used: if (n &lt;= 32)...</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>264</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>125</CodePrev>
+    <CodeCurrent>2113922436</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>56</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>369</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>590939713</CodeCurrent>
+    <CodeNext>1368950319</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>57</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>369</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>590939713</CodeCurrent>
+    <CodeNext>1368950319</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>58</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>370</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>590939713</CodePrev>
+    <CodeCurrent>1368950319</CodeCurrent>
+    <CodeNext>9724071</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>59</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>370</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>590939713</CodePrev>
+    <CodeCurrent>1368950319</CodeCurrent>
+    <CodeNext>9724071</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>60</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[j][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>370</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>590939713</CodePrev>
+    <CodeCurrent>1368950319</CodeCurrent>
+    <CodeNext>9724071</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>61</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>371</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>1368950319</CodePrev>
+    <CodeCurrent>9724071</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>62</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[j][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>371</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>1368950319</CodePrev>
+    <CodeCurrent>9724071</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>63</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>380</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3910283880</CodeCurrent>
+    <CodeNext>3716421193</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>64</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix-&gt;matrice[row1][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>380</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3910283880</CodeCurrent>
+    <CodeNext>3716421193</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>65</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>381</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>3910283880</CodePrev>
+    <CodeCurrent>3716421193</CodeCurrent>
+    <CodeNext>2971869347</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>66</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix-&gt;matrice[row1][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>381</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>3910283880</CodePrev>
+    <CodeCurrent>3716421193</CodeCurrent>
+    <CodeNext>2971869347</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>67</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix-&gt;matrice[row2][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>381</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>3910283880</CodePrev>
+    <CodeCurrent>3716421193</CodeCurrent>
+    <CodeNext>2971869347</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>68</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>382</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>3716421193</CodePrev>
+    <CodeCurrent>2971869347</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>69</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix-&gt;matrice[row2][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>382</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>3716421193</CodePrev>
+    <CodeCurrent>2971869347</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>70</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>390</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>317990477</CodeCurrent>
+    <CodeNext>644752904</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>71</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[row1][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>390</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>317990477</CodeCurrent>
+    <CodeNext>644752904</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>72</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>391</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>317990477</CodePrev>
+    <CodeCurrent>644752904</CodeCurrent>
+    <CodeNext>38953127</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>73</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[row1][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>391</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>317990477</CodePrev>
+    <CodeCurrent>644752904</CodeCurrent>
+    <CodeNext>38953127</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>74</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[row2][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>391</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>317990477</CodePrev>
+    <CodeCurrent>644752904</CodeCurrent>
+    <CodeNext>38953127</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>75</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>392</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>644752904</CodePrev>
+    <CodeCurrent>38953127</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>76</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[row2][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>392</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>644752904</CodePrev>
+    <CodeCurrent>38953127</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>77</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>405</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>74259905</CodeCurrent>
+    <CodeNext>20124011</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>78</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>408</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>8404385</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>79</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>408</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>8404385</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>80</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>414</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>438109769</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>81</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>414</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>438109769</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>82</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>414</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>438109769</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>83</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>414</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>438109769</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>84</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>423</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>5773925</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>85</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>423</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>5773925</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>86</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>444</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2891688741</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>87</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>444</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2891688741</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>88</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[j][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>444</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2891688741</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>89</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>448</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>40743717</CodeCurrent>
+    <CodeNext>531111</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>90</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[j][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>448</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>40743717</CodeCurrent>
+    <CodeNext>531111</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>91</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>449</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>40743717</CodePrev>
+    <CodeCurrent>531111</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>92</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>449</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>40743717</CodePrev>
+    <CodeCurrent>531111</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>93</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>451</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>125</CodePrev>
+    <CodeCurrent>5773957</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>94</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>451</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>125</CodePrev>
+    <CodeCurrent>5773957</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>95</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>469</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>22825805</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>96</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: copy[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>469</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>22825805</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>97</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>484</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>590939713</CodeCurrent>
+    <CodeNext>1368950319</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>98</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>484</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>590939713</CodeCurrent>
+    <CodeNext>1368950319</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>99</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>485</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>590939713</CodePrev>
+    <CodeCurrent>1368950319</CodeCurrent>
+    <CodeNext>9724071</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>100</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>485</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>590939713</CodePrev>
+    <CodeCurrent>1368950319</CodeCurrent>
+    <CodeNext>9724071</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>101</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[j][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>485</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>590939713</CodePrev>
+    <CodeCurrent>1368950319</CodeCurrent>
+    <CodeNext>9724071</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>102</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>486</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>1368950319</CodePrev>
+    <CodeCurrent>9724071</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>103</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[j][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>486</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>1368950319</CodePrev>
+    <CodeCurrent>9724071</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>104</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: minor-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>510</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1187873501</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>105</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: minor-&gt;matrice[k][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>510</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1187873501</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>106</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>510</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1187873501</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>107</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>510</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1187873501</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>108</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>535</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>2113893605</CodeCurrent>
+    <CodeNext>20124011</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>109</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>538</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1249895273</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>110</DefaultOrder>
+    <ErrorCode>V121</ErrorCode>
+    <Message>Implicit conversion of the type of 'new' operator's argument to size_t type.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>538</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1249895273</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>111</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>544</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>2285786322</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>112</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>544</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>2285786322</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>113</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matriceAux-&gt;matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>544</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>2285786322</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>114</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matriceAux-&gt;matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>544</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>20121843</CodePrev>
+    <CodeCurrent>2285786322</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>115</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>552</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>195531</CodePrev>
+    <CodeCurrent>4869403</CodeCurrent>
+    <CodeNext>539</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>116</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>552</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>195531</CodePrev>
+    <CodeCurrent>4869403</CodeCurrent>
+    <CodeNext>539</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>117</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>554</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>539</CodePrev>
+    <CodeCurrent>4869395</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>118</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>554</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>539</CodePrev>
+    <CodeCurrent>4869395</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>119</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>574</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1217629194</CodeCurrent>
+    <CodeNext>80488571</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>120</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[j][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>574</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1217629194</CodeCurrent>
+    <CodeNext>80488571</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>121</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>574</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1217629194</CodeCurrent>
+    <CodeNext>80488571</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>122</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>577</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1267246223</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>123</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[j][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>577</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1267246223</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>124</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>577</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1267246223</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>125</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>605</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>74302669</CodeCurrent>
+    <CodeNext>80480883</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>126</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>605</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>74302669</CodeCurrent>
+    <CodeNext>80480883</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>127</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>608</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2434725</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>128</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>608</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>2434725</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>129</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>615</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>80673395</CodePrev>
+    <CodeCurrent>2741912773</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>130</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrice[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>615</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>80673395</CodePrev>
+    <CodeCurrent>2741912773</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>131</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>615</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>80673395</CodePrev>
+    <CodeCurrent>2741912773</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>132</DefaultOrder>
+    <ErrorCode>V108</ErrorCode>
+    <Message>Incorrect index type: matrix[i][not a memsize-type]. Use memsize type instead.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>615</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>80673395</CodePrev>
+    <CodeCurrent>2741912773</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>133</DefaultOrder>
+    <ErrorCode>V524</ErrorCode>
+    <Message>It is odd that the body of 'getTransposeMatrix' function is fully equivalent to the body of 'rotireMatrice' function.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>477</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>3944299232</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <LineExtension>363,477</LineExtension>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>1</Level>
+    <DefaultOrder>134</DefaultOrder>
+    <ErrorCode>V730</ErrorCode>
+    <Message>Not all members of a class are initialized inside the constructor. Consider inspecting: matrice.</Message>
+    <Project>MatriceUtil</Project>
+    <ShortFile>matrice.cpp</ShortFile>
+    <Line>5</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\githubprojects\matriceutil\matriceutil\matrice.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>223669253</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+</NewDataSet>

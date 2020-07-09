@@ -1,0 +1,22 @@
+﻿  Main.cpp
+Main.cpp(11): error C2040: 'a': 'Matrice *' differs in levels of indirection from 'Matrice'
+Main.cpp(12): error C2040: 'b': 'Matrice *' differs in levels of indirection from 'Matrice'
+Main.cpp(13): error C2040: 'c': 'Matrice *' differs in levels of indirection from 'Matrice'
+  Matrice.cpp
+Matrice.cpp(50): error C2511: 'void Matrice::Inmultire(Matrice,Matrice)': overloaded member function not found in 'Matrice'
+  c:\c++\visual\matriceutil\matriceutil\Matrice.h(7): note: see declaration of 'Matrice'
+Matrice.cpp(51): error C2597: illegal reference to non-static member 'Matrice::n'
+Matrice.cpp(51): error C3867: 'Matrice::n': non-standard syntax; use '&' to create a pointer to member
+Matrice.cpp(51): error C2568: '<': unable to resolve function overload
+Matrice.cpp(52): error C2597: illegal reference to non-static member 'Matrice::n'
+Matrice.cpp(52): error C3867: 'Matrice::n': non-standard syntax; use '&' to create a pointer to member
+Matrice.cpp(52): error C2568: '<': unable to resolve function overload
+Matrice.cpp(55): error C2597: illegal reference to non-static member 'Matrice::n'
+Matrice.cpp(55): error C3867: 'Matrice::n': non-standard syntax; use '&' to create a pointer to member
+Matrice.cpp(55): error C2568: '<': unable to resolve function overload
+Matrice.cpp(57): error C2597: illegal reference to non-static member 'Matrice::matrice'
+Matrice.cpp(57): error C3867: 'Matrice::matrice': non-standard syntax; use '&' to create a pointer to member
+Matrice.cpp(57): error C2109: subscript requires array or pointer type
+Matrice.cpp(58): error C2597: illegal reference to non-static member 'Matrice::matrice'
+Matrice.cpp(58): error C3867: 'Matrice::matrice': non-standard syntax; use '&' to create a pointer to member
+Matrice.cpp(58): error C2109: subscript requires array or pointer type

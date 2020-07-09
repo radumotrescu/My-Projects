@@ -1,0 +1,3 @@
+﻿  Matrice.cpp
+c:\githubprojects\matriceutil\matriceutil\matrice.cpp(380): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  MatriceUtil.vcxproj -> C:\GitHubProjects\MatriceUtil\x64\Debug\MatriceUtil.exe

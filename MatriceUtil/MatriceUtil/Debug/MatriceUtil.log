@@ -1,0 +1,6 @@
+﻿  Matrice.cpp
+  Main.cpp
+  Generator.cpp
+c:\c++\visual\matriceutil\matriceutil\generator.cpp(7): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  MatriceUtil.vcxproj -> C:\C++\Visual\MatriceUtil\Debug\MatriceUtil.exe

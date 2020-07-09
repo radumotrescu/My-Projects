@@ -28,6 +28,7 @@ void Matrice::citire(std::string numeFisier)
 
 void Matrice::matriceVida()
 {
+	delete[] matrice;
 	matrice = new double*[n];
 	for (int i = 0; i < n; i++)
 		matrice[i] = new double[n];
@@ -431,7 +432,11 @@ long long int Matrice::determinant()
 			}
 		}
 		if (found == false)
+		{
+			delete copyMatrix;
 			return 0;
+		}
+			
 		for (int i = j + 1; i < n; i++)
 		{
 			while (true)
@@ -455,13 +460,15 @@ long long int Matrice::determinant()
 			}
 		}
 
+		
+
 	}
 
 	for (int i = 0; i < n; i++)
 	{
 		result *= copy[i][i];
 	}
-
+	delete copyMatrix;
 	delete[] copy;
 	return result;
 
@@ -608,6 +615,7 @@ void Matrice::normalInversion(Matrice *matriceAux)
 				matrice[i][j - n] = matrix[i][j];
 
 		}
+		delete[] matrix;
 	}
 	else
 	{
